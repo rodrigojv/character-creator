@@ -5,14 +5,23 @@ body,
 }
 
 body {
-  background-color: hsl(180deg, 25%, 92%);
+  /* background-color: hsl(180deg, 25%, 92%);
+  background-color: hsl(195deg, 20%, 86%); */
+  --second-half: hsl(195deg, 20%, 86%);
+  --first-half: hsl(180deg, 25%, 92%);
+  background: linear-gradient(var(--first-half) 50%, var(--second-half) 50%);
+  /* Does not repeat the gradient, it limits to two times */
+  background-repeat: no-repeat;
+  /* Since it repeats two times, a gaps forms underneath the gradient,
+     This rules gets rid of that gap. */
+  background-attachment: fixed;
   margin: 0;
 }
 
 *,
 *:before,
 *:after {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
 
