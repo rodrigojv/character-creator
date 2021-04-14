@@ -4,8 +4,16 @@
   background: hsl(0deg, 0%, 5%);
   color: white;
   text-align: center;
+  width: 100%;
 }
 
 a {
   color: inherit;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    /*  */
+    width: max-content;
+  }
 }
